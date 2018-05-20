@@ -1,0 +1,30 @@
+package com.clientes.func;
+
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Test {
+
+	public static void main(String[] args) {
+
+		List<Cliente> listaClientes = new ArrayList<Cliente>();
+		
+		listaClientes.add(new Cliente (0,3,6));
+		listaClientes.add(new Cliente(2,4,7));
+
+		System.out.println(listaClientes);
+
+		Archivador cliente1 = new Archivador();
+		cliente1.guardarCliente(listaClientes, "archivoCliente.ser");
+
+		System.out.println("funca");
+
+		List<Cliente> nuevaLista = cliente1.recuperarCliente("archivoCliente.ser");
+		System.out.println(nuevaLista);
+		System.out.printf("funcax2");
+
+	}
+}
+
+
