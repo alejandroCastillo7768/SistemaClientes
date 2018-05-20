@@ -1,0 +1,51 @@
+package com.clientes.func;
+
+import java.io.Serializable;
+
+public class Cliente implements Serializable {
+
+	private static final long serialVersionUID = 1L;
+	
+	private int numCliente;
+	private int dni;
+	private int telefono;
+
+	public Cliente(int numCliente, int dni, int telefono) {
+
+		this.setNumCliente(numCliente);
+		this.setDni(dni);
+		this.setTelefono(telefono);
+	}
+
+	public Cliente() {
+
+		this(0, 0, 0);
+	}
+
+	public int getNumCliente() {
+		return numCliente;
+	}
+
+	public void setNumCliente(int numCliente) {
+		this.numCliente = numCliente;
+	}
+
+	public int getDni() {
+		return dni;
+	}
+
+	public void setDni(int dni) {
+		this.dni = dni;
+	}
+
+	public int getTelefono() {
+		return telefono;
+	}
+
+	public void setTelefono(int telefono) {
+		this.telefono = telefono;
+	}
+
+
+
+}
