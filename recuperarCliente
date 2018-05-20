@@ -1,0 +1,21 @@
+public List<Cliente> recuperarCliente(String fileName) {
+
+		List<Cliente>cliente = null;
+
+		try {
+
+			ObjectInputStream in = new ObjectInputStream(new FileInputStream(fileName));
+
+			{	cliente = (List<Cliente>) in.readObject();	}
+
+			in.close();
+
+		} catch (IOException | ClassNotFoundException e) {
+
+			System.out.println(e);
+		}
+
+		return cliente;
+	}
+
+}
